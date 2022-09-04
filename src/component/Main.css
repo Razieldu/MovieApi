@@ -1,0 +1,45 @@
+h1 {
+    /* color: white; */
+  }
+  h2 {
+    /* color: white; */
+    margin:15px 0px
+  }
+  h4 {
+    /* color: white; */
+    margin:15px 0px
+  }
+  
+  
+  select{
+    background-color: white;
+  }
+  
+  button {
+    text-align: center;
+    padding: 5px;
+    border-radius: 6px;
+    border: 1px solid;
+    color: tomato;
+    background-color: bisque;
+    font-weight: 700;
+  }
+  
+  button:hover {
+    background-color: tomato;
+    color: bisque;
+  }
+  
+  input {
+    outline: tomato 1px solid;
+    border: none;
+    background-color: white;
+  }
+  
+  input:focus {
+    outline: tomato 1px solid;
+    border: none;
+    background-color: bisque;
+    border-radius: 6px;
+  }
+  
