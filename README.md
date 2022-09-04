@@ -8,7 +8,7 @@ MovieApi
 
 ## 專案敘述(Project Description)
 
-使用 https://www.themoviedb.org/ 的電影Api,以react以及react-router來建構,主要練習資料的處理,以及api的操作<br/
+使用 https://www.themoviedb.org/ 的電影Api,以react以及react-router來建構,主要練習資料的處理,以及api的操作<br/>
 
 使用useEffect來獲取資料,並透過useState來操控Api</br>
 
