@@ -1,0 +1,199 @@
+/* h1 {
+ 
+} */
+h2 {
+  /* color: white; */
+  margin: 15px 0px;
+}
+h4 {
+  /* color: white; */
+  margin: 15px 0px;
+}
+
+.bigTitle {
+  text-align: center;
+  font-size: 70px;
+  color: red;
+  margin: 50px 0px 50px;
+}
+
+.subTitle {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.selectDiv {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+select {
+  background-color: white;
+  font-size: 20px;
+}
+
+.buttonDiv {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.buttonAhead {
+  margin-right: 20px;
+  margin-left: 5px;
+}
+
+.hrDiv {
+  width: 100%;
+  height: 5px;
+  background-color: pink;
+  margin-top: 50px;
+}
+
+.movieDetailTotal {
+  display: flex;
+  padding: 40px 100px 40px 100px;
+  justify-content: center;
+  border-bottom: 5px solid pink;
+}
+
+.movieContentWithPhotoDiv {
+  display: flex;
+  justify-content: center;
+  padding: 10px;
+}
+
+.movieContent {
+  padding: 10px;
+}
+
+.overview {
+  margin: 10px 0px;
+}
+
+.watchComment {
+  margin-top: 5px;
+}
+.noVideo {
+  margin: 100px 200px;
+}
+
+button {
+  text-align: center;
+  padding: 5px;
+  border-radius: 6px;
+  border: 1px solid;
+  color: tomato;
+  background-color: bisque;
+  font-weight: 700;
+}
+
+button:hover {
+  background-color: tomato;
+  color: bisque;
+}
+
+input {
+  outline: tomato 1px solid;
+  border: none;
+  background-color: white;
+  width: 100px;
+  margin: 0px 0px 0px 20px;
+  text-align: center;
+}
+
+input:focus {
+  outline: tomato 1px solid;
+  border: none;
+  background-color: bisque;
+  border-radius: 6px;
+}
+
+.photDiv {
+  padding: 10px;
+}
+
+@media (max-width: 1200px) {
+  .bigTitle {
+    font-size: 45px;
+  }
+  h1 {
+    font-size: 24px;
+  }
+  h2 {
+    font-size: 20px;
+  }
+  h4 {
+    font-size: 16px;
+  }
+  .movieDetailTotal {
+    flex-wrap: wrap;
+  }
+  .photoDiv {
+    order: 1;
+  }
+  .movieandContentDiv {
+    order: 2;
+  }
+  .moviePhoto {
+    width:200px;
+    height:300px
+  }
+}
+
+@media (max-width:778px) {
+
+  .video {
+    width: 500px;
+    height: 300px;
+  }  
+ 
+}
+
+
+@media (max-width: 576px) {
+  .bigTitle {
+    font-size: 35px;
+  }
+  h1 {
+    font-size: 18px;
+  }
+  h2 {
+    margin: 2px 0px;
+    font-size: 16px;
+  }
+
+  
+
+  h4 {
+    margin: 2px 0px;
+    font-size: 14px;
+  }
+  .moviePhoto {
+    height: 300px;
+    width: 200px;
+  }
+  .movieVideoDiv {
+    padding: 0px;
+  }
+  .video {
+    width: 350px;
+    height: 250px;
+  }
+  .movieDetailTotal {
+    padding: 20px;
+    flex-wrap: wrap;
+  }
+
+  .movieandContentDiv {
+    order: 2;
+  }
+
+  .photoDiv {
+    padding: 15px 10px;
+    order: 1;
+  }
+  select {
+    font-size: 16px;
+  }
+}

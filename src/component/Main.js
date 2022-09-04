@@ -2,7 +2,7 @@ import React from "react";
 import { useEffect, useState } from "react";
 import ReactPlayer from "react-player";
 import { Link } from "react-router-dom";
-import "./main.css"
+import classes from "./Main.module.css";
 const languageData = [
   { LangCultureName: "zh-TW", DisplayName: "中文 - 台灣" },
   { LangCultureName: "zh-CN", DisplayName: "中文 - 中國" },
@@ -29,8 +29,7 @@ function Main() {
   const [movieVideo, setMovievideo] = useState([]);
   const [language, setlanguage] = useState("zh-TW");
 
-  const api = process.env.REACT_APP_My_APi
-
+  const api = process.env.REACT_APP_My_APi;
 
   useEffect(() => {
     const getAllData = async () => {
@@ -133,33 +132,16 @@ function Main() {
   );
   return (
     <div className="App">
-      <h1
-        style={{
-          textAlign: "center",
-          fontSize: "70px",
-          color: "red",
-          margin: "50px 0px 50px",
-        }}
-      >
-        Movie Database
-      </h1>
-      <h1 style={{ textAlign: "center", marginBottom: "20px" }}>
+      <h1 className={classes.bigTitle}>Movie Database</h1>
+      <h1 className={classes.subTitle}>
         目前列表 : {filteredSearchType[0].display}
       </h1>
-      <h1 style={{ textAlign: "center", marginBottom: "20px" }}>
+      <h1 className={classes.subTitle}>
         目前語系 : {filteredLanguage[0].DisplayName}
       </h1>
-      <h1 style={{ textAlign: "center", marginBottom: "20px" }}>
-        目前頁面 : {page}
-      </h1>
-      <div
-        style={{
-          display: "flex",
-          justifyContent: "center",
-          marginBottom: "20px",
-        }}
-      >
-        <select style={{ fontSize: "20px" }} onChange={searchTypeChangeHandler}>
+      <h1 className={classes.subTitle}>目前頁面 : {page}</h1>
+      <div className={classes.selectDiv} style={{}}>
+        <select onChange={searchTypeChangeHandler}>
           {movieSearchType.map((type) => (
             <option key={type.value} value={type.value}>
               {type.display}
@@ -167,7 +149,7 @@ function Main() {
           ))}
         </select>
 
-        <select style={{ fontSize: "20px" }} onChange={languageChangeHandler}>
+        <select onChange={languageChangeHandler}>
           {languageData.map((data) => (
             <option key={data.LangCultureName} value={data.LangCultureName}>
               {data.DisplayName}
@@ -175,80 +157,59 @@ function Main() {
           ))}
         </select>
       </div>
-      <div
-        style={{
-          display: "flex",
-          justifyContent: "center",
-          marginBottom: "20px",
-        }}
-      >
+      <div className={classes.buttonDiv}>
         <button onClick={previousPageHandler}>上一頁</button>
 
         <input
           value={pageInput}
           max="500"
-          style={{
-            width: "100px",
-            margin: "0px 0px 0px 20px",
-            textAlign: "center",
-          }}
           onChange={pageChangeHandler}
           placeholder="預定前往頁面"
         ></input>
-        <button
-          style={{ marginRight: "20px", marginLeft: "5px" }}
-          onClick={pageInputHandler}
-        >
+        <button className={classes.buttonAhead} onClick={pageInputHandler}>
           前往
         </button>
         <button onClick={nextPageHandlder}>下一頁</button>
       </div>
-      <div
-        style={{
-          width: "100%",
-          height: "5px",
-          backgroundColor: "pink",
-          marginTop: "50px",
-        }}
-      ></div>
+      <div className={classes.hrDiv}></div>
       {data.length > 0 &&
         data.map((movie) => (
-          <div
-            key={movie.id}
-            style={{
-              display: "flex",
-              padding: "40px 100px 40px 100px",
-              justifyContent: "center",
-              borderBottom: "5px solid pink",
-            }}
-          >
-            <div id={movie.id}>
+          <div className={classes.movieDetailTotal} key={movie.id}>
+            <div className={classes.movieandContentDiv} id={movie.id}>
               {movieVideo.length > 0 &&
                 movieVideo
                   .filter((good) => good.id === movie.id)
                   .map((item) => (
                     <div
                       key={item.id}
-                      style={{
-                        display: "flex",
-                        justifyContent: "center",
-                        padding: "10px",
-                      }}
+                      className={classes.movieContentWithPhotoDiv}
                     >
                       {/* <h1>{item.movieKey}</h1>
                     <h1>{item.id}</h1> */}
                       {item.movieKey !== "FindNoVideo" && (
-                        <ReactPlayer
-                          key={item.id}
-                          url={`https://www.youtube.com/watch?v=${item.movieKey}`}
-                        />
+                        <div className={classes.movieVideoDiv} key={item.id}>
+                          {/* <ReactPlayer
+                            className={classes.video}
+                            url={`https://www.youtube.com/watch?v=${item.movieKey}`}
+                          /> */}
+                          <iframe
+                            className={classes.video}
+                            title="video"
+                            width="640"
+                            height="360"
+                            data-thumbnail-src="https://i.ytimg.com/vi/TCaM1Tl01lQ/0.jpg"
+                            src={`https://www.youtube.com/embed/${item.movieKey}?autoplay=0&loop=0&controls=1&start=100&end=600&rel=1`}
+                            frameborder="0"
+                            allowfullscreen
+                          />
+                        </div>
                       )}
                       {item.movieKey === "FindNoVideo" && (
-                        <h1 style={{ margin: "100px 200px" }}>查無相關影片</h1>
+                        <h1 className={classes.noVideo}>查無相關影片</h1>
                       )}
                     </div>
                   ))}
-              <div style={{ padding: "10px" }}>
+              <div className={classes.movieContent}>
                 <h2>成人電影 : {movie.adult ? "是 " : "否"}</h2>
                 <h2>movieId : {movie.id}</h2>
                 <h2>語言 : {movie.original_language}</h2>
@@ -256,23 +217,23 @@ function Main() {
                 <h2>片名: {movie.title}</h2>
                 <h2>人氣度 : {movie.popularity}</h2>
                 <h2>電影簡介 :</h2>
-                <h4 style={{margin:"10px 0px"}}> {movie.overview}</h4>
+                <h4 className={classes.overview}> {movie.overview}</h4>
                 <h2>發行日期 : {movie.release_date}</h2>
                 <h2>平均分數 : {movie.vote_average}</h2>
                 <h2>投票總數 : {movie.vote_count}</h2>
-                
+
                 <Link to={`${movie.id}=${movie.title}`}>
-                  <h2 style={{marginTop:"5px"}}>點擊查看評論</h2>
+                  <h2 className={classes.watchComment}>點擊查看評論</h2>
                 </Link>
               </div>
             </div>
-            <div>
-              <div style={{ padding: "10px" }}>
-                <img
-                  alt={movie.title}
-                  src={`https://image.tmdb.org/t/p/w500${movie.poster_path}`}
-                />
-              </div>
+
+            <div className={classes.photoDiv}>
+              <img
+                className={classes.moviePhoto}
+                alt={movie.title}
+                src={`https://image.tmdb.org/t/p/w500${movie.poster_path}`}
+              />
             </div>
           </div>
         ))}

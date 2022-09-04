@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router";
-import "./Comment.css";
+import classes from "./Comment.module.css"
 import { dealAvatarPath, dealTime } from "../helperFunction/Function";
 function Comment() {
   const [data, setData] = useState();
@@ -45,42 +45,31 @@ function Comment() {
   return (
     <>
       <div
-        style={{
-          textAlign: "center",
-          padding: "50px 0px",
-          display: "flex",
-          flexDirection: "column",
-          alignItems: "center",
-          justifyContent: "space-evenly",
-          gap: "40px",
-        }}
+       className={classes.totalDiv}
+   
       >
         {/* <h1>{urlData[0]}</h1> */}
-        <h1 style={{ fontSize: "70px" }}>留言與評論</h1>
+        <h1 className={classes.bigTitle}>留言與評論</h1>
         <img
           alt={"poster"}
           src={`https://image.tmdb.org/t/p/w500${image.file_path}`}
-          style={{ width: "300px", height: "400px" }}
+        className={classes.photo}
         />
         <h1>{urlData[1]}</h1>
       </div>
 
       {data &&
         data.map((eachComment) => (
-          <div key={eachComment.author} style={{ padding: "25px 80px" }}>
+          <div key={eachComment.author} className={classes.commentTotalDiv} >
             <div
-              style={{
-                display: "flex",
-                justifyContent: "flex-start",
-                alignItems: "center",
-                gap: "10px",
-              }}
+              className={classes.authorDiv}
+   
             >
               {eachComment.author_details.avatar_path && (
                 <>
                   {/* <p>{typeof eachComment.author_details.avatar_path}</p> */}
                   <img
-                    className="avatar"
+                    className={classes.avatar}
                     src={`${
                       dealAvatarPath(eachComment.author_details.avatar_path)
                     }`}
@@ -91,7 +80,7 @@ function Comment() {
                 </>
               )}
               {eachComment.author_details.avatar_path === null && (
-              <img className="avatar" src={"https://i.imgur.com/luwBw5x.png"} />
+              <img className={classes.avatar} src={"https://i.imgur.com/luwBw5x.png"} />
             )}
               <h3>{eachComment.author}</h3>
             </div>
