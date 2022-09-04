@@ -28,14 +28,14 @@ function Main() {
   const [movieVideo, setMovievideo] = useState([]);
   const [language, setlanguage] = useState("zh-TW");
 
-  const Api = process.env.REACT_APP_My_APi
-  console.log(Api)
+  const api = process.env.REACT_APP_My_APi
+
 
   useEffect(() => {
     const getAllData = async () => {
       const getMovie = async () => {
         const response = await fetch(
-          `https://api.themoviedb.org/3/movie/${searchType}?${Api}=9e3fb9c0b102c598b86ea4a98b8d6dcc&language=${language}&page=${page}`
+          `https://api.themoviedb.org/3/movie/${searchType}?api_key=${api}&language=${language}&page=${page}`
         );
         if (!response.ok) {
           throw new Error("can not get data");
