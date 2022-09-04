@@ -24,6 +24,7 @@ https://resumeboostrapversion.web.app/
 
 ![PROJECT PHOTO](https://github.com/Razieldu/MovieApi/raw/main/projectPhoto/mainPage.png)
 
+---
 
 ### 評論區
 
