@@ -22,9 +22,9 @@ https://resumeboostrapversion.web.app/
 
 ### 首頁
 
-![PROJECT PHOTO](https://github.com/Razieldu/ResumeBootstrapVersion/raw/main/profectPhotoes/resumeboostrapversion.web.app_.png)
+![PROJECT PHOTO](https://github.com/Razieldu/MovieApi/raw/main/projectPhoto/projectPhoto-mainPage.png)
 
 
 ### 評論區
 
-![PROJECT PHOTO](https://github.com/Razieldu/ResumeBootstrapVersion/raw/main/profectPhotoes/resumeboostrapversion.web.app_.png)
+![PROJECT PHOTO](https://github.com/Razieldu/MovieApi/raw/main/projectPhoto/projectPhoto-mainPage.png)
