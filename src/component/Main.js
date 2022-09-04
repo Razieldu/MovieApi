@@ -2,6 +2,7 @@ import React from "react";
 import { useEffect, useState } from "react";
 import ReactPlayer from "react-player";
 import { Link } from "react-router-dom";
+import "./main.css"
 const languageData = [
   { LangCultureName: "zh-TW", DisplayName: "中文 - 台灣" },
   { LangCultureName: "zh-CN", DisplayName: "中文 - 中國" },

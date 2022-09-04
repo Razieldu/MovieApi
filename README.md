@@ -1,6 +1,6 @@
 ![REACT](https://img.shields.io/badge/-React%5E18.0.0-blue)
 ![ReactRouter](https://img.shields.io/badge/-React--router%5E6.3.0-ff69b4)
-![FIREBATH](https://img.shields.io/badge/-FirebaseAuthRESTAPI-RED)
+
 
 ## 專案名稱(Project's Title)
 
