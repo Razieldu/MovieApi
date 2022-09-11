@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 function NavigationBar() {
   return (
     <div className={classes.navigationDiv}>
-      <Link to={"/"}><h1 className={classes.logo}>Korea Dramaix</h1></Link>
+      <Link className={classes.linkH1logo} to={"/"}><h1 className={classes.logo}>KoreaDramaix</h1></Link>
       <div className={classes.ulDiv}>
         <li>
           <Link className={classes.linkH1} to={"/"}><h1 className={classes.items}>Movie</h1></Link>

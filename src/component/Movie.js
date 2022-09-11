@@ -140,7 +140,7 @@ function Main() {
   );
 
   return (
-    <div className={classes.App}>
+    <div className={classes.totalDiv}>
       <h1 className={classes.bigTitle}>Korea Dramaix</h1>
       <h1 className={classes.subTitle}>
         目前列表 : {filteredSearchType[0].display}

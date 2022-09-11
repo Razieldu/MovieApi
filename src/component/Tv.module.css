@@ -56,6 +56,7 @@ select {
   display: flex;
   justify-content: center;
   padding: 10px;
+  /* border: solid 2px tomato; */
 }
 
 .movieContent {
@@ -70,14 +71,14 @@ select {
   margin-top: 5px;
 }
 
-.noVideoDiv {
+.noVideoDiv{
   background-color: black;
   border: solid 4px pink;
-}
+  }
 
 .noVideo {
-  margin: 100px 150px;
   color: white;
+  margin: 100px 150px;
 }
 
 button {
@@ -93,6 +94,7 @@ button {
 button:hover {
   background-color: tomato;
   color: bisque;
+  border: 1px solid tomato;
 }
 
 input {
@@ -151,6 +153,10 @@ input:focus {
 }
 
 @media (max-width: 576px) {
+  .App {
+    padding-top: 50px;
+  }
+
   .bigTitle {
     font-size: 35px;
   }

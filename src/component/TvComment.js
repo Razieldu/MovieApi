@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router";
-import classes from "./MovieComment.module.css";
+import classes from "./TvComment.module.css";
 import { dealAvatarPath, dealTime } from "../helperFunction/Function";
 function TvComment() {
   const [data, setData] = useState();

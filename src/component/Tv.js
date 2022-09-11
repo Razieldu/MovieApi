@@ -2,7 +2,7 @@ import React from "react";
 import { useEffect, useState } from "react";
 import ReactPlayer from "react-player";
 import { Link } from "react-router-dom";
-import classes from "./Movie.module.css";
+import classes from "./Tv.module.css";
 
 const api = process.env.REACT_APP_My_APi;
 
@@ -136,7 +136,7 @@ function Main() {
   );
 
   return (
-    <div className="App">
+    <div className={classes.App}>
       <h1 className={classes.bigTitle}>Korea Dramaix</h1>
       <h1 className={classes.subTitle}>
         目前列表 : {filteredSearchType[0].display}
@@ -145,7 +145,7 @@ function Main() {
         目前語系 : {filteredLanguage[0].DisplayName}
       </h1>
       <h1 className={classes.subTitle}>目前頁面 : {page}</h1>
-      <div className={classes.selectDiv} style={{}}>
+      <div className={classes.selectDiv} >
         <select onChange={searchMovieTypeChangeHandler}>
           {tvSearchType.map((type) => (
             <option key={type.value} value={type.value}>
