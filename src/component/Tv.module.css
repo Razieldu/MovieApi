@@ -1,12 +1,7 @@
-/* h1 {
- 
-} */
 h2 {
-  /* color: white; */
   margin: 15px 0px;
 }
 h4 {
-  /* color: white; */
   margin: 15px 0px;
 }
 
@@ -35,7 +30,7 @@ select {
 .buttonDiv {
   display: flex;
   justify-content: center;
-  margin-bottom: 20px;
+  margin-bottom: 150px;
 }
 
 .buttonAhead {
@@ -74,8 +69,15 @@ select {
 .watchComment {
   margin-top: 5px;
 }
+
+.noVideoDiv {
+  background-color: black;
+  border: solid 4px pink;
+}
+
 .noVideo {
-  margin: 100px 200px;
+  margin: 100px 150px;
+  color: white;
 }
 
 button {
@@ -136,20 +138,17 @@ input:focus {
     order: 2;
   }
   .moviePhoto {
-    width:400px;
-    height:500px
+    width: 400px;
+    height: 500px;
   }
 }
 
-@media (max-width:778px) {
-
+@media (max-width: 778px) {
   .video {
     width: 500px;
     height: 300px;
-  }  
- 
+  }
 }
-
 
 @media (max-width: 576px) {
   .bigTitle {
@@ -162,8 +161,6 @@ input:focus {
     margin: 2px 0px;
     font-size: 16px;
   }
-
-  
 
   h4 {
     margin: 2px 0px;
@@ -195,5 +192,8 @@ input:focus {
   }
   select {
     font-size: 16px;
+  }
+  .noVideo {
+    margin: 100px 20px;
   }
 }

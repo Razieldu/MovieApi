@@ -2,13 +2,13 @@ import React from "react";
 import { useEffect, useState } from "react";
 import ReactPlayer from "react-player";
 import { Link } from "react-router-dom";
-import classes from "./Main.module.css";
+import classes from "./Movie.module.css";
 const languageData = [
   { LangCultureName: "zh-TW", DisplayName: "中文 - 台灣" },
   { LangCultureName: "zh-CN", DisplayName: "中文 - 中國" },
   { LangCultureName: "ko-KR", DisplayName: "韓國 - 韓國" },
   { LangCultureName: "ja-JP", DisplayName: "日文 - 日本" },
-  { LangCultureName: "en-US", DisplayName: "美國英語" },
+  { LangCultureName: "en-US", DisplayName: "美國 - 英語" },
   { LangCultureName: "fr-FR", DisplayName: "法國 - 法國" },
   { LangCultureName: "de-DE", DisplayName: "德國 - 德國" },
 ];
@@ -19,6 +19,14 @@ const movieSearchType = [
   { value: "popular", display: "近期流行電影" },
   { value: "now_playing", display: "現正熱映電影" },
   // { value: "latest", display: "最新電影" },
+];
+
+const tvSearchType = [
+  { value: "top_rated", display: "好評電視劇" },
+  { value: "airing_today", display: "本日播映中電視劇" },
+  { value: "on_the_air", display: "近期播映電視劇" },
+  { value: "now_playing", display: "現正熱映電視劇" },
+  { value: "popular", display: "近期流行電視劇" },
 ];
 
 function Main() {
@@ -48,7 +56,7 @@ function Main() {
       };
       const getmovieMovie = async (id) => {
         const response = await fetch(
-          `https://api.themoviedb.org/3/movie/${id}/videos?api_key=9e3fb9c0b102c598b86ea4a98b8d6dcc&language=en-US`
+          `https://api.themoviedb.org/3/movie/${id}/videos?api_key=${api}&language=en-US`
         );
         if (!response.ok) {
           throw new Error("can not get data");
@@ -119,7 +127,7 @@ function Main() {
     setlanguage(event.target.value);
   };
 
-  const searchTypeChangeHandler = (event) => {
+  const searchMovieTypeChangeHandler = (event) => {
     setSearchType(event.target.value);
   };
 
@@ -130,9 +138,10 @@ function Main() {
   const filteredSearchType = movieSearchType.filter(
     (each) => each.value === searchType
   );
+
   return (
-    <div className="App">
-      <h1 className={classes.bigTitle}>Movie Database</h1>
+    <div className={classes.App}>
+      <h1 className={classes.bigTitle}>Korea Dramaix</h1>
       <h1 className={classes.subTitle}>
         目前列表 : {filteredSearchType[0].display}
       </h1>
@@ -141,14 +150,13 @@ function Main() {
       </h1>
       <h1 className={classes.subTitle}>目前頁面 : {page}</h1>
       <div className={classes.selectDiv} style={{}}>
-        <select onChange={searchTypeChangeHandler}>
+        <select onChange={searchMovieTypeChangeHandler}>
           {movieSearchType.map((type) => (
             <option key={type.value} value={type.value}>
               {type.display}
             </option>
           ))}
         </select>
-
         <select onChange={languageChangeHandler}>
           {languageData.map((data) => (
             <option key={data.LangCultureName} value={data.LangCultureName}>
@@ -205,7 +213,9 @@ function Main() {
                         </div>
                       )}
                       {item.movieKey === "FindNoVideo" && (
-                        <h1 className={classes.noVideo}>查無相關影片</h1>
+                        <div className={classes.noVideoDiv}>
+                          <h1 className={classes.noVideo}>查無相關影片</h1>
+                        </div>
                       )}
                     </div>
                   ))}
@@ -218,6 +228,7 @@ function Main() {
                 <h2>人氣度 : {movie.popularity}</h2>
                 <h2>電影簡介 :</h2>
                 <h4 className={classes.overview}> {movie.overview}</h4>
+
                 <h2>發行日期 : {movie.release_date}</h2>
                 <h2>平均分數 : {movie.vote_average}</h2>
                 <h2>投票總數 : {movie.vote_count}</h2>
