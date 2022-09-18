@@ -37,6 +37,13 @@ https://tmbdmovieapi.web.app/
 
 ![PROJECT PHOTO](https://github.com/Razieldu/MovieApi/raw/main/projectPhoto/mainPhone1.png)
 
+
+
 ### Iphone12主要頁面2(main page part two on Iphone12)
 
 ![PROJECT PHOTO](https://github.com/Razieldu/MovieApi/raw/main/projectPhoto/mainPhone2.png)
+
+### 手機畫面參考影片
+
+https://user-images.githubusercontent.com/97752691/190895476-65ac2b44-dbdb-4e2c-a8f9-6038c9b3be9a.mp4
+
