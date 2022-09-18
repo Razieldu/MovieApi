@@ -6,8 +6,6 @@
   background-color: black;
 }
 
-
-
 .logo {
   color: red;
   display: inline-block;
@@ -45,6 +43,13 @@ li {
   cursor: pointer;
 }
 
+.buttonAndCartDiv {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap:20px;
+}
+
 @media (max-width: 576px) {
   .logo {
     font-size: 16px;
@@ -67,7 +72,7 @@ li {
   .logo {
     font-size: 12px;
   }
-  
+
   .linkH1logo {
     /* background-color: aqua; */
     display: flex;

@@ -1,0 +1,148 @@
+.mainDiv {
+  position: relative;
+}
+
+.threeBarDiv {
+  position: relative;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.eachDiv {
+  height: 4px;
+  background-color: silver;
+  width: 40px;
+  border-radius: 20px;
+}
+
+.eachDiv::before {
+  content: "";
+  height: 4px;
+  width: 40px;
+  position: absolute;
+  top: 10px;
+  background-color: silver;
+  border-radius: 20px;
+}
+
+.eachDiv::after {
+  content: "";
+  height: 4px;
+  width: 40px;
+  position: absolute;
+  top: 26px;
+  background-color: silver;
+  border-radius: 20px;
+}
+
+.clickedEachDiv {
+  height: 4px;
+  background-color: transparent;
+  width: 40px;
+  border-radius: 50px;
+}
+
+.clickedEachDiv::before {
+  content: "";
+  height: 4px;
+  width: 35px;
+  position: absolute;
+  /* top: 10px; */
+  background-color: bisque;
+  border-radius: 20px;
+  transform: rotate(45deg);
+}
+
+.clickedEachDiv:after {
+  content: "";
+  height: 4px;
+  width: 35px;
+  position: absolute;
+  /* top: 26px; */
+  background-color: bisque;
+  border-radius: 20px;
+  transform: rotate(315deg);
+}
+
+.navLinkDiv {
+  position: absolute;
+  background-color: bisque;
+  width: 140px;
+  height: 80vh;
+  top: 60px;
+  right: -20px;
+  padding: 80px 20px;
+  border-bottom-left-radius: 10px;
+  /* border: 1.5px  solid tomato;  */
+  animation: bigger 0.1s linear;
+  animation-fill-mode: forwards;
+}
+
+@keyframes bigger {
+  0% {
+    width: 0px;
+  }
+  50% {
+    width: 75px;
+  }
+  100% {
+    width: 140px;
+  }
+}
+
+.navLinkPDiv {
+  display: flex;
+  align-items: center;
+  /* text-align: center; */
+  /* padding: 0px 10px; */
+  /* border-radius: 10px; */
+  margin-top: 30px;
+}
+
+.navLinkPDiv:hover {
+  background-color: aliceblue;
+  animation: shake 1s linear;
+  animation-fill-mode: forwards;
+}
+
+@keyframes shake {
+  0% {
+    transform: rotate(5deg) scale(1.2);
+  }
+  25% {
+    transform: rotate(-5deg) scale(1.2);
+  }
+  50% {
+    transform: rotate(5deg) scale(1.2);
+  }
+  100% {
+    transform: rotate(-5deg) scale(1.2);
+  }
+}
+
+.navlinkP {
+  display: flex;
+  /* margin: 20px 0px 5px 0px; */
+  color: tomato;
+  font-weight: 700;
+  /* box-shadow: 1px 1px 4px tomato; */
+  font-size: 18px;
+  cursor: pointer;
+  margin-left: 5px;
+}
+
+.navlinkHr {
+  background: tomato;
+  border: 0;
+  margin: 5px;
+  width: 100%;
+  height: 1px;
+  /* background:yellow; */
+}
+
+.navlinkHr:hover {
+  background: aliceblue;
+}
