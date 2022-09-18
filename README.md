@@ -23,12 +23,20 @@ https://tmbdmovieapi.web.app/
 ## 參考圖片(Project Photo)
 
 
-### 首頁
+### 1.首頁(main page)
 
-![PROJECT PHOTO](https://github.com/Razieldu/MovieApi/raw/main/projectPhoto/mainPage.png)
+![PROJECT PHOTO](https://github.com/Razieldu/MovieApi/raw/main/projectPhoto/main.png)
 
 ---
 
-### 評論區
+### 2.評論區(comment page)
 
-![PROJECT PHOTO](https://github.com/Razieldu/MovieApi/raw/main/projectPhoto/commentPage.png)
+![PROJECT PHOTO](https://github.com/Razieldu/MovieApi/raw/main/projectPhoto/comment.png)
+
+### Iphone12主要頁面1(main page part 1 on Iphone12)
+
+![PROJECT PHOTO](https://github.com/Razieldu/MovieApi/raw/main/projectPhoto/mainPhone1.png)
+
+### Iphone12主要頁面2(main page part two on Iphone12)
+
+![PROJECT PHOTO](https://github.com/Razieldu/MovieApi/raw/main/projectPhoto/mainPhone2.png)
