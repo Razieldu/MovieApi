@@ -134,6 +134,11 @@
   margin-left: 5px;
 }
 
+.phoneNavLink{
+text-decoration: none;
+
+}
+
 .navlinkHr {
   background: tomato;
   border: 0;

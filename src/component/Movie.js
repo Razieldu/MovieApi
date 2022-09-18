@@ -207,8 +207,8 @@ function Main() {
                             height="360"
                             data-thumbnail-src="https://i.ytimg.com/vi/TCaM1Tl01lQ/0.jpg"
                             src={`https://www.youtube.com/embed/${item.movieKey}?autoplay=0&loop=0&controls=1&start=100&end=600&rel=1`}
-                            frameborder="0"
-                            allowfullscreen
+                            frameBorder="0"
+                            allowFullscreen
                           />
                         </div>
                       )}

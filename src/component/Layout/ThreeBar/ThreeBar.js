@@ -1,6 +1,6 @@
 import classes from "./ThreeBar.module.css";
 import React, { useState } from "react";
-// import * as MuiIcons from "@mui/icons-material"
+import { Link } from "react-router-dom";
 import TheatersIcon from "@mui/icons-material/Theaters";
 import TvIcon from "@mui/icons-material/Tv";
 import PhoneIcon from "@mui/icons-material/Phone";
@@ -12,16 +12,16 @@ function ThreeBar() {
     setClickedBar((prev) => !prev);
   };
 
-  // const chooseIcon = (option) => {
-  //   const IconName = Muicon[option];
-  // };
-
   const navBarData = [
-    { name: "Movie", icon: <TheatersIcon sx={{ color: "tomato" }} /> },
-    { name: "TV", icon: <TvIcon sx={{ color: "tomato" }} /> },
-    { name: "Contact", icon: <PhoneIcon sx={{ color: "tomato" }} /> },
-    { name: "About", icon: <InfoIcon sx={{ color: "tomato" }} /> },
-    { name: "登出", icon: <LogoutIcon sx={{ color: "tomato" }} /> },
+    {
+      name: "Movie",
+      icon: <TheatersIcon sx={{ color: "tomato" }} />,
+      link: "/",
+    },
+    { name: "TV", icon: <TvIcon sx={{ color: "tomato" }} />, link: "/tv" },
+    { name: "Contact", icon: <PhoneIcon sx={{ color: "tomato" }} />, link: "" },
+    { name: "About", icon: <InfoIcon sx={{ color: "tomato" }} />, link: "" },
+    { name: "登出", icon: <LogoutIcon sx={{ color: "tomato" }} />, link: "" },
   ];
 
   let barCssclasses = clickedBar
@@ -39,7 +39,12 @@ function ThreeBar() {
             <div>
               <div className={classes.navLinkPDiv}>
                 {each.icon}
-                <p className={classes.navlinkP}>{each.name}</p>
+                <Link
+                  className={classes.phoneNavLink}
+                  to={each.link !== "" ? each.link : "/"}
+                >
+                  <p className={classes.navlinkP}>{each.name}</p>
+                </Link>
               </div>
               <hr className={classes.navlinkHr} />
             </div>
