@@ -40,3 +40,4 @@ https://tmbdmovieapi.web.app/
 ### Iphone12主要頁面2(main page part two on Iphone12)
 
 ![PROJECT PHOTO](https://github.com/Razieldu/MovieApi/raw/main/projectPhoto/mainPhone2.png)
+
